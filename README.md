@@ -1,4 +1,4 @@
-# WebProjec
+# WebProject
 # 🧠 Spring AI RAG with MySQL (Student-Course Management)
 
 This project is a Spring Boot application that integrates:
