@@ -1,4 +1,55 @@
-# WebProject
+# WebProjec
+# 🧠 Spring AI RAG with MySQL (Student-Course Management)
+
+This project is a Spring Boot application that integrates:
+
+- ✅ Spring AI
+- ✅ Ollama (Local LLM - phi3 model)
+- ✅ MySQL (XAMPP)
+- ✅ RAG (Retrieval Augmented Generation)
+
+The system converts natural language questions into SQL queries using AI and fetches data from a relational database.
+
+---
+
+## 🚀 Features
+
+- 🔹 Ask questions in natural language
+- 🔹 AI converts question → SQL query
+- 🔹 Executes query using JDBC
+- 🔹 Returns dynamic HTML response
+- 🔹 Uses local LLM (Ollama - phi3)
+- 🔹 MySQL relational database (Student-Course mapping)
+
+---
+
+## 🛠️ Tech Stack
+
+- Java 17+
+- Spring Boot
+- Spring AI
+- Ollama (phi3 model)
+- MySQL (XAMPP)
+- HikariCP (Connection Pooling)
+- JDBC Template
+
+---
+
+## 📂 Database Schema
+
+### Tables:
+
+- **Student**
+- **Course**
+- **StudentCourse** (Many-to-Many mapping)
+
+Example Query Generated:
+
+```sql
+SELECT sc.student_id, s.name AS student_name, c.name AS course_name
+FROM StudentCourse sc
+JOIN Student s ON sc.student_id = s.id
+JOIN Course c ON sc.course_id = c.id;
 📚 Student Course Management System
 
 A full-stack Java MVC web application built using Servlets, JSP, Hibernate, and MySQL to manage student course enrollment and academic records.
